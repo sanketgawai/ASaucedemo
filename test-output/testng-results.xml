@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-09T16:09:34 IST" name="HomePage" finished-at="2026-02-09T16:09:36 IST" duration-ms="2392">
+  <suite started-at="2026-02-09T18:04:42 IST" name="Default suite" finished-at="2026-02-09T18:04:45 IST" duration-ms="3267">
     <groups>
     </groups>
-    <test started-at="2026-02-09T16:09:34 IST" name="Test" finished-at="2026-02-09T16:09:36 IST" duration-ms="2392">
+    <test started-at="2026-02-09T18:04:42 IST" name="Default test" finished-at="2026-02-09T18:04:45 IST" duration-ms="3267">
       <class name="testClasses.HomePageTest">
-        <test-method is-config="true" signature="initializeDriverwithBeforeMethod()[pri:0, instance:testClasses.HomePageTest@d737b89]" started-at="2026-02-09T16:09:34 IST" name="initializeDriverwithBeforeMethod" finished-at="2026-02-09T16:09:36 IST" duration-ms="2029" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testClasses.HomePageTest@eadd4fb]" started-at="2026-02-09T18:04:42 IST" name="login" finished-at="2026-02-09T18:04:45 IST" duration-ms="2947" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeDriverwithBeforeMethod -->
-        <test-method is-config="true" signature="loginAndInitPages()[pri:0, instance:testClasses.HomePageTest@d737b89]" started-at="2026-02-09T16:09:36 IST" name="loginAndInitPages" finished-at="2026-02-09T16:09:36 IST" duration-ms="27" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAndInitPages -->
-        <test-method signature="VerifyAllProductsareDisplayed()[pri:0, instance:testClasses.HomePageTest@d737b89]" started-at="2026-02-09T16:09:36 IST" name="VerifyAllProductsareDisplayed" finished-at="2026-02-09T16:09:36 IST" duration-ms="296" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="VerifyAllProductsareDisplayed()[pri:0, instance:testClasses.HomePageTest@eadd4fb]" started-at="2026-02-09T18:04:45 IST" name="VerifyAllProductsareDisplayed" finished-at="2026-02-09T18:04:45 IST" duration-ms="75" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyAllProductsareDisplayed -->
+        <test-method signature="verifyProductsPageLoadsAfterLogin()[pri:0, instance:testClasses.HomePageTest@eadd4fb]" started-at="2026-02-09T18:04:45 IST" name="verifyProductsPageLoadsAfterLogin" finished-at="2026-02-09T18:04:45 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductsPageLoadsAfterLogin -->
+        <test-method signature="verifyProductsPageTitle()[pri:0, instance:testClasses.HomePageTest@eadd4fb]" started-at="2026-02-09T18:04:45 IST" name="verifyProductsPageTitle" finished-at="2026-02-09T18:04:45 IST" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductsPageTitle -->
+        <test-method signature="verifySwagLabsLogoisDisplayed()[pri:0, instance:testClasses.HomePageTest@eadd4fb]" started-at="2026-02-09T18:04:45 IST" name="verifySwagLabsLogoisDisplayed" finished-at="2026-02-09T18:04:45 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySwagLabsLogoisDisplayed -->
       </class> <!-- testClasses.HomePageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- HomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
