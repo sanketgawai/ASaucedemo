@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testClasses.AddToCartTest">
+      <class name="testClasses.HomePageTest">
         <methods>
-          <include name="VerifyProductAddinAddToCartAfterClickAddToCart"/>
-          <include name="initializeDriverwithBeforeMethod"/>
+          <include name="login"/>
+          <include name="VerifyAllProductsareDisplayed"/>
+          <include name="verifySwagLabsLogoisDisplayed"/>
         </methods>
-      </class> <!-- testClasses.AddToCartTest -->
+      </class> <!-- testClasses.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

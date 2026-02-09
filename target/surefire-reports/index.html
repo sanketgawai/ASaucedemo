@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePage" title="testClasses.HomePageTest" class="method navigator-link" hash-for-method="VerifyAllProductsareDisplayed">VerifyAllProductsareDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePage" title="testClasses.HomePageTest" class="method navigator-link" hash-for-method="verifyProductsPageLoadsAfterLogin">verifyProductsPageLoadsAfterLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePage" title="testClasses.HomePageTest" class="method navigator-link" hash-for-method="verifyProductsPageTitle">verifyProductsPageTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePage" title="testClasses.HomePageTest" class="method navigator-link" hash-for-method="verifySwagLabsLogoisDisplayed">verifySwagLabsLogoisDisplayed</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-HomePage -->
@@ -129,6 +144,27 @@
                   <a name="VerifyAllProductsareDisplayed">
                   </a> <!-- VerifyAllProductsareDisplayed -->
                   <span class="method-name">VerifyAllProductsareDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyProductsPageLoadsAfterLogin">
+                  </a> <!-- verifyProductsPageLoadsAfterLogin -->
+                  <span class="method-name">verifyProductsPageLoadsAfterLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyProductsPageTitle">
+                  </a> <!-- verifyProductsPageTitle -->
+                  <span class="method-name">verifyProductsPageTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySwagLabsLogoisDisplayed">
+                  </a> <!-- verifySwagLabsLogoisDisplayed -->
+                  <span class="method-name">verifySwagLabsLogoisDisplayed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,16 +221,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyAllProductsareDisplayed')
+data.setCell(0, 1, 'verifyProductsPageTitle')
 data.setCell(0, 2, 'testClasses.HomePageTest')
-data.setCell(0, 3, 340);
+data.setCell(0, 3, 82);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifySwagLabsLogoisDisplayed')
+data.setCell(1, 2, 'testClasses.HomePageTest')
+data.setCell(1, 3, 60);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'VerifyAllProductsareDisplayed')
+data.setCell(2, 2, 'testClasses.HomePageTest')
+data.setCell(2, 3, 56);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyProductsPageLoadsAfterLogin')
+data.setCell(3, 2, 'testClasses.HomePageTest')
+data.setCell(3, 3, 15);
 window.suiteTableData['HomePage']= { tableData: data, tableDiv: 'times-div-HomePage'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 340 ms</span>
+              <span class="suite-total-time">Total running time: 213 ms</span>
               <div id="times-div-HomePage">
               </div> <!-- times-div-HomePage -->
             </div> <!-- times-div -->
@@ -209,20 +257,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-HomePage" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testClasses.HomePageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyProductsPageTitle</span>
-                <br/>
-                <span class="ignored-method-name">verifyProductsPageLoadsAfterLogin</span>
-                <br/>
-                <span class="ignored-method-name">verifySwagLabsLogoisDisplayed</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-HomePage" class="panel">
@@ -232,17 +269,25 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testClasses.HomePageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeDriverwithBeforeMethod</span>
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">loginAndInitPages</span>
-                <span class="method-start">2249 ms</span>
-              </div> <!-- configuration-method before -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">VerifyAllProductsareDisplayed</span>
-                <span class="method-start">2295 ms</span>
+                <span class="method-start">2607 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyProductsPageLoadsAfterLogin</span>
+                <span class="method-start">2678 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyProductsPageTitle</span>
+                <span class="method-start">2703 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySwagLabsLogoisDisplayed</span>
+                <span class="method-start">2790 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

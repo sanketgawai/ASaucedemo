@@ -23,6 +23,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pomClasses.LoginPage;
 
 public class BaseTest {
 
@@ -114,5 +115,11 @@ public class BaseTest {
 		FileUtils.copyFile(src, dest);
 		return System.getProperty("user.dir")+"//reports//"+testCaseName+"+.png";
 	}
+	
+//	public void login(WebDriver driver)
+//	{
+//		LoginPage loginPage = new LoginPage(driver);
+//		loginPage.logginginSaucedemo("standard_user","secret_sauce");
+//	}
 	
 }
