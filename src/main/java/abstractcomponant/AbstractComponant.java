@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AbstractComponant {
@@ -20,6 +21,7 @@ public class AbstractComponant {
 	WebDriverWait wait;
 	JavascriptExecutor js;
 	Actions act;
+	Select s;
 	
 	public AbstractComponant(WebDriver driver)
 	{
@@ -27,8 +29,14 @@ public class AbstractComponant {
 		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		js = (JavascriptExecutor)driver;
 		act = new Actions(driver);
+		
 	}
 	
+	public void selectDropDown(WebElement ele,String name)
+	{
+		s = new Select(ele);
+		s.selectByVisibleText(name);
+	}
 	
 	public void waitForElementToAppearByLocator(By locator)
 	{

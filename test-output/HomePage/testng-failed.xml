@@ -5,10 +5,8 @@
     <classes>
       <class name="testClasses.HomePageTest">
         <methods>
-          <include name="loginAndInitPages"/>
-          <include name="VerifyAllProductsareDisplayed"/>
-          <include name="verifySwagLabsLogoisDisplayed"/>
-          <include name="initializeDriverwithBeforeMethod"/>
+          <include name="login"/>
+          <include name="verifyNameZtoAsorting"/>
         </methods>
       </class> <!-- testClasses.HomePageTest -->
     </classes>
