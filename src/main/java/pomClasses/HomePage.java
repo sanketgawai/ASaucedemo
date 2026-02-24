@@ -1,5 +1,7 @@
 package pomClasses;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -127,6 +129,10 @@ public class HomePage extends AbstractComponant{
 	@FindBy(xpath="//a[@class='shopping_cart_link']")
 	WebElement AddToCartField;
 	
+	//sort dropdown
+	@FindBy(xpath="//span[contains(text(),'Name (A to')]/following-sibling::select")
+	private WebElement nameSortDropDown;
+
 	public String getTitle()
 	{
 		return backpackTitleLink.getText();
@@ -149,15 +155,75 @@ public class HomePage extends AbstractComponant{
 	
 	public void clickonProductAddToCartBtn(String productName) {
 		//addBikeLightBtn.click();
-		getAllAddToCartButton(productName);
+		WebElement addToCartBtn = getAllAddToCartButton(productName);
+		waitForElementToWebElementisClickable(addToCartBtn);
+		addToCartBtn.click();
 	}
 	
 	public AddToCart goToAddToCartPage(WebDriver driver)
 	{
-		waitForElementToWebElementisClickable(AddToCartField);	
-		Set<String> oldWindows = driver.getWindowHandles();
-		clickOnAndOpenInAnotherTabUsingKey(AddToCartField);
-		switchToNewWindow(oldWindows);
-		return new AddToCart(driver);
+		 AddToCartField.click();
+		 return new AddToCart(driver);
 	}
+	
+	public boolean verifyEachProductHasNamePriceAndImage() {
+
+	    for (WebElement item : inventoryItems) {
+
+	        WebElement name = item.findElement(By.xpath(".//div[@data-test='inventory-item-name']"));
+	        WebElement price = item.findElement(By.xpath(".//div[@data-test='inventory-item-price']"));
+	        WebElement image = item.findElement(By.xpath(".//img"));
+
+	        // Validate name
+	        if (!name.isDisplayed() || name.getText().trim().isEmpty()) {
+	            return false;
+	        }
+
+	        // Validate price
+	        if (!price.isDisplayed() || price.getText().trim().isEmpty()) {
+	            return false;
+	        }
+
+	        // Validate image
+	        if (!image.isDisplayed() || image.getAttribute("src").isEmpty()) {
+	            return false;
+	        }
+	    }
+
+	    return true;
+	}
+	
+	public boolean verifyProductNamesAreUnique() {
+	    Set<String> uniqueNames = new HashSet<>();
+
+	    for (WebElement item : inventoryItems) {
+	        String name = item.findElement(By.xpath(".//div[@data-test='inventory-item-name']")).getText().trim();
+	        if (!uniqueNames.add(name)) { // add returns false if name already exists
+	            System.out.println("Duplicate found: " + name);
+	            return false;
+	        }
+	    }
+
+	    return true; // all unique
+	}
+
+	public List<String> getAllProductNames()
+	{
+	    List<String> names = new ArrayList<>();
+
+	    for(WebElement ele : productNames)
+	    {
+	        names.add(ele.getText().trim());
+	    }
+
+	    return names;
+	}
+	
+	public void sortWithZtoA()
+	{
+		waitForWebElementToAppearByWebElement(nameSortDropDown);
+		selectDropDown(nameSortDropDown,"Name (Z to A)");
+	}	
+	
+	
 }
